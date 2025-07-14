@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #606060;
+            margin: 0;
+            padding: 0;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+            width: 300px;
+            gap: 10px;
+        }
+
+        button {
+            padding: 25px;
+            font-size: 1.5rem;
+            background-color: #070707;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            color: white;
+
+
+        }
+
+        button:hover {
+            background-color: rgb(164, 205, 0);
+
+        }
+
+        .btn {
+            background-color: #070707;
+            color: white;
+
+        }
+
+        .special {
+            background-color: #ff8c00;
+            color: white;
+        }
+
+        #display {
+            width: 275px;
+            height: 50px;
+            font-size: 1.5rem;
+            text-align: right;
+            padding: 10px;
+            border: none;
+            background-color: #000000;
+            color: yellow;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        button.pressed {
+            transform: scale(0.95);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <div>
+        <input type="text" id="display" disabled>
+        <button id="theme-toggle">🌙</button>
+   
+
+        <div class="buttons">
+            <audio id="click-sound" src="mouseclick.mp3"></audio>
+            <audio id="error-sound" src="error.mp3"></audio>
+            <!-- <div> -->
+            <button class="btn">9</button>
+            <button class="btn">8</button>
+            <button class="btn">7</button>
+            <button class="special">C</button>
+            <!-- </div> -->
+            <!-- <div> -->
+            <button class="btn">6</button>
+            <button class="btn">5</button>
+            <button class="btn">4</button>
+            <button class="special">-</button>
+            <!-- </div> -->
+            <!-- <div> -->
+            <button class="btn">3</button>
+            <button class="btn">2</button>
+            <button class="btn">1</button>
+            <button class="special">+</button>
+            <!-- </div> -->
+            <!-- <div> -->
+            <button class="special">*</button>
+            <button class="special">/</button>
+            <button class="special">←</button>
+            <button class="special">=</button>
+            <!-- </div> -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.4.0/math.min.js"></script>
+
+
+</body>
+
+</html>
